@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CindyBotMaui.MainPage">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="CindyBot Chat" 
+               HorizontalOptions="Center" 
+               FontAttributes="Bold" 
+               FontSize="Large"/>
+
+        <ScrollView x:Name="ChatScrollView">
+            <StackLayout x:Name="ChatMessagesStack" Spacing="10"/>
+        </ScrollView>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Entry x:Name="MessageEntry" 
+                   Placeholder="Type your message here..." 
+                   Grid.Column="0"/>
+            <Button Text="Send" 
+                    Grid.Column="1" 
+                    Clicked="OnSendMessage"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
