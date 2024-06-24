@@ -34,6 +34,19 @@ CindyBot is a sophisticated chatbot application that leverages the power of Azur
 2. Launch the server side API by executing `dotnet run` in the `api` directory.
 3. Access the chatbot interface through the web browser at the specified localhost port.
 
+## .NET MAUI Front-End Setup and Running
+
+CindyBot now includes a .NET MAUI project for cross-platform compatibility, targeting Android and iOS platforms alongside the existing React-based web client. This allows for a broader reach and versatility in how users can interact with CindyBot.
+
+To set up and run the .NET MAUI front-end:
+
+1. Ensure you have the .NET MAUI SDK installed on your machine.
+2. Navigate to the `frontend-maui` directory.
+3. Use the command `dotnet build` to build the project.
+4. To run the application, use `dotnet run` or deploy it to an Android or iOS emulator.
+
+This setup provides an alternative way to interact with CindyBot, offering a native application experience on mobile platforms.
+
 ## Azure Resources Setup with Terraform
 
 The Terraform scripts in the `terraform` directory allow for the easy setup of necessary Azure resources, including CosmosDB, Azure OpenAI service, and networking components. Follow the instructions within the directory to initialize and apply the Terraform configuration.
@@ -45,4 +58,3 @@ For more detailed information on the setup and configuration of CindyBot, refer 
 ## Security and Telemetry
 
 CindyBot employs Azure Key Vault for secure storage of sensitive data, such as connection strings. It also integrates with Application Insights and Azure Monitor for telemetry, ensuring robust monitoring and diagnostics capabilities.
-
